@@ -12,7 +12,7 @@ import streamlit as st
 ROOT = Path(__file__).resolve().parent
 
 st.set_page_config(
-    page_title="",
+    page_title="Drainage Efficiency Predictive Model",
     page_icon="💧",
     layout="wide",
 )
