@@ -12,7 +12,7 @@ import streamlit as st
 ROOT = Path(__file__).resolve().parent
 
 st.set_page_config(
-    page_title="Water Content Drainage Predictor",
+    page_title="",
     page_icon="💧",
     layout="wide",
 )
@@ -94,7 +94,7 @@ def projection(fine: float, wg: int, slope: float, time_hours: float, water_perc
 
 
 st.markdown('<div class="brand">Sensor decision support</div>', unsafe_allow_html=True)
-st.markdown('<h1 class="main-title">Water Content Drainage Predictor</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-title"></h1>', unsafe_allow_html=True)
 st.markdown(
     '<div class="subtitle">Estimate water-content change rate from field conditions and a current moisture reading.</div>',
     unsafe_allow_html=True,
