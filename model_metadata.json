@@ -1,0 +1,98 @@
+{
+  "model_name": "Drainage Random Forest",
+  "version": "1.0.0",
+  "algorithm": "RandomForestRegressor",
+  "estimators": 200,
+  "random_state": 42,
+  "sample_count": 6682,
+  "train_count": 5345,
+  "test_count": 1337,
+  "feature_columns": [
+    "fine",
+    "wg",
+    "slope",
+    "Time (hours)",
+    "w%"
+  ],
+  "target_column": "W\u0394/t (hr)",
+  "ranges": {
+    "fine": {
+      "min": 0.0,
+      "max": 10.0
+    },
+    "wg": {
+      "min": 0.0,
+      "max": 1.0
+    },
+    "slope": {
+      "min": 0.0,
+      "max": 3.0
+    },
+    "Time (hours)": {
+      "min": 1.0,
+      "max": 374.0
+    },
+    "w%": {
+      "min": 0.031937499999999994,
+      "max": 0.2594375
+    }
+  },
+  "unique_values": {
+    "fine": [
+      0.0,
+      3.0,
+      6.0,
+      10.0
+    ],
+    "wg": [
+      0.0,
+      1.0
+    ],
+    "slope": [
+      0.0,
+      1.0,
+      2.0,
+      3.0
+    ]
+  },
+  "target_quantiles": {
+    "0.1": -2.2548913043477824e-05,
+    "0.25": -3.124999999999654e-06,
+    "0.5": -5.89622641509369e-07,
+    "0.75": 0.0,
+    "0.9": 5.227946304044067e-07
+  },
+  "metrics": {
+    "r2": 0.9047940917657344,
+    "rmse_fraction_per_hour": 0.0004978567551480358,
+    "mae_fraction_per_hour": 4.698130553462677e-05
+  },
+  "feature_importance": [
+    {
+      "feature": "w%",
+      "importance": 0.47956400355868617
+    },
+    {
+      "feature": "Time (hours)",
+      "importance": 0.33096230299065815
+    },
+    {
+      "feature": "fine",
+      "importance": 0.11168589832713187
+    },
+    {
+      "feature": "wg",
+      "importance": 0.04617530399229601
+    },
+    {
+      "feature": "slope",
+      "importance": 0.031612491131227716
+    }
+  ],
+  "units": {
+    "w%": "fraction (0.17 = 17%)",
+    "target": "water-content fraction per hour",
+    "display_target": "percentage points per hour"
+  },
+  "validation_note": "Random 80/20 holdout matching the supplied analysis code. Field calibration is recommended before operational decisions."
+}
